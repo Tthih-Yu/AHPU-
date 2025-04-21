@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园卡交易记录查询工具 - 快速入门</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 35px 45px;
+            color: #444;
+            background-color: #f9fafb;
+            /* Lighter background */
+            border: 1px solid #e5e7eb;
+            /* Softer border */
+            border-radius: 12px;
+            /* More rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            /* Slightly more shadow */
+        }
+        
+        h1 {
+            color: #1f2937;
+            /* Darker heading */
+            border-bottom: 2px solid #3b82f6;
+            /* Blue accent */
+            padding-bottom: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            /* Bolder title */
+        }
+        
+        h2 {
+            color: #1d4ed8;
+            /* Stronger blue */
+            margin-top: 45px;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        h4 {
+            color: #1f2937;
+            margin-top: 0;
+            margin-bottom: 15px;
+            /* Added space below h4 */
+            font-weight: 500;
+        }
+        
+        .step {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-left: 5px solid #60a5fa;
+            /* Lighter blue accent */
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .warning {
+            background-color: #fffbeb;
+            /* Light yellow */
+            border: 1px solid #fef3c7;
+            border-left: 5px solid #f59e0b;
+            /* Amber */
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            color: #b45309;
+        }
+        
+        .warning ul li {
+            margin-bottom: 10px;
+            /* More space in warning lists */
+        }
+        
+        .warning ul ul {
+            margin-top: 8px;
+            /* Space before nested list */
+        }
+        /* Specific styles for inline info/warning boxes */
+        
+        .warning-inline,
+        .info-inline,
+        .note {
+            padding: 12px 15px;
+            margin-top: 12px;
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+        
+        .warning-inline {
+            border-left: 4px solid #ef4444;
+            /* Red */
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        
+        .info-inline {
+            border-left: 4px solid #22c55e;
+            /* Green */
+            background-color: #dcfce7;
+            color: #15803d;
+            margin-top: 8px !important;
+            /* Adjusted margin */
+        }
+        
+        .note {
+            background-color: #f3f4f6;
+            /* Light gray */
+            color: #4b5563;
+            border-left: 4px solid #9ca3af;
+            /* Gray */
+        }
+        
+        code {
+            background-color: #e5e7eb;
+            /* Slightly darker code bg */
+            padding: 3px 7px;
+            border-radius: 5px;
+            font-family: Consolas, 'Courier New', monospace;
+            color: #1f2937;
+            font-size: 0.9em;
+        }
+        /* Removed background from strong, using font color for emphasis */
+        
+        strong {
+            font-weight: bold;
+            background-color: transparent;
+            padding: 0;
+            color: inherit;
+            /* Inherit color, use <b> for bold */
+        }
+        
+        b {
+            /* Use <b> for bold text now */
+            font-weight: 500;
+            /* Medium weight bold */
+        }
+        
+        ul,
+        ol {
+            padding-left: 25px;
+            /* Slightly less indent */
+        }
+        
+        li {
+            margin-bottom: 12px;
+            /* More space between list items */
+        }
+        
+        hr {
+            border: 0;
+            border-top: 1px solid #e5e7eb;
+            /* Match border color */
+            margin: 30px 0;
+            /* More spacing around HR */
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #6b7280;
+            /* Gray text */
+            font-size: 0.9em;
+        }
+        /* Style links */
+        
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>💳 校园卡交易记录查询工具 - 快速入门指南</h1>
+
+    <p>欢迎使用本工具！下面是简单的使用步骤，帮助您快速获取和导出校园卡交易记录。</p>
+
+    <h2>✨ 首次使用</h2>
+    <div class="step">
+        <h4>本地运行基于Python！必须确保安装必要的Python和相关库</h4>
+        <ol>
+            <li>🖱️ <b>双击运行 <code>安装依赖.bat</code> 安装必要的Python库</b></li>
+            <li>✅ <b>如果安装成功，继续下一步；如有错误，请确保已安装Python</b> (建议 Python 3.6+)。</li>
+        </ol>
+    </div>
+
+    <h2>▶️ 启动程序</h2>
+    <div class="step">
+        <ol>
+            <li>🖱️<b>双击运行 <code>启动交易查询工具.bat</code></b></li>
+            <li>💻 <b>在打开的浏览器界面中登录系统</b>
+                <div class="warning-inline" style="margin-top: 10px; padding: 10px; border-left: 3px solid #e74c3c; background-color: #fceded;">
+                    <font color="red">🔑 ！账号就是你的学号，密码是《小灵龙》APP的登陆密码，也就是你的《小灵龙》APP里充值时候的查询密码！！！</font><br>
+                    <font color="red">🔑 ！账号就是你的学号，密码是《小灵龙》APP的登陆密码，也就是你的《小灵龙》APP里充值时候的查询密码！！！</font><br>
+                    <font color="red">🔑 ！账号就是你的学号，密码是《小灵龙》APP的登陆密码，也就是你的《小灵龙》APP里充值时候的查询密码！！！</font><br>
+                    <font color="red">❗ ！账号就是你的学号，密码是《小灵龙》APP的登陆密码，不是教务系统的统一身份登陆密码！！！</font>
+                </div>
+            </li>
+            <li>✅ <b>登录成功后，点击窗口底部的<code>我已登录成功，提取Cookie并准备获取流水</code>按钮</b></li>
+            <li>⌨️ <b>根据提示，弹出的窗口输入你的账号并确定</b>
+                <div class="info-inline" style="margin-top: 10px; padding: 10px; border-left: 3px solid #e74c3c; background-color: #fceded;">
+                    <font color="red">⚠️这里的账号不是你的学号，而是你的校园卡卡号</font>
+                </div>
+                <div class="info-inline" style="margin-top: 5px; padding: 10px; border-left: 3px solid #2ecc71; background-color: #eafaf1;">
+                    <font color="green">⚠️卡号查询方法：进入《小灵龙》APP,依次选择-应用中心-主副卡转账</font><br>
+                    <font color="green">⚠️主卡账号就是卡号（五位数字）将其复制输入即可</font>
+                </div>
+            </li>
+            <li>🔢 <b>设置要获取的页面范围（<code>所有</code>表示获取全部页面）</b>
+                <div class="note" style="font-size: 0.9em; color: #555; margin-top: 5px;">
+                    ℹ️ 如果选择"所有"后无效请手动输入最大值
+                </div>
+            </li>
+            <li>🖱️ <b>点击<code>获取交易记录</code>按钮开始获取数据</b></li>
+            <li>💾 <b>获取完成后，选择保存格式并点击<code>保存交易记录</code></b>
+                <div class="note" style="font-size: 0.9em; color: #555; margin-top: 5px;">
+                    📊 如果需要数据可视化建议保存为<code>json</code>格式
+                </div>
+            </li>
+        </ol>
+    </div>
+
+
+    <h2>⚠️ 注意事项</h2>
+    <div class="warning">
+        <ul>
+            <li>⌨️ <i>获取过程中可能需要在控制台输入账号 (已在上方步骤说明)</i></li>
+            <li>🚫 请不要频繁运行程序，以免给服务器带来压力</li>
+            <li>🔒 保存的数据文件包含您的交易记录，请妥善保管
+                <ul style="margin-top: 5px;">
+                    <li>ℹ️ 其实泄露也没影响，因为保存的只是过往的在学校的消费记录</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h2>❓ 常见问题</h2>
+    <div class="step">
+        <p>
+            <font color="red"><b>Q:</b></font> 程序无法启动？</p>
+        <p>
+            <font color="red"><b>A:</b></font> 确保安装了Python和必要的依赖库</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+        <p>
+            <font color="red"><b>Q:</b></font> 无法获取交易记录？</p>
+        <p>
+            <font color="red"><b>A:</b></font> 确保已经完全登录到校园卡系统，并且学号和密码输入正确，卡号也输入正确。</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+        <p>
+            <font color="red"><b>Q:</b></font> 数据保存失败？</p>
+        <p>
+            <font color="red"><b>A:</b></font> 检查文件名是否包含非法字符，以及是否有写入权限</p>
+    </div>
+
+    <hr>
+
+
+    <footer>2025 校园卡交易记录查询工具 --严禁用于非法用途-- 仅限学习交流</footer>
+</body>
+
+</html>
